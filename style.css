@@ -1,21 +1,12 @@
-.body{
-/* Rectangle 7 */
-display: flex;
-justify-content: center;
-position: fixed;
-/* Rectangle 7 */
-
-
-width: 1169px;
-height: 1429px;
-left: 273px;
-top: 60px;
-
-background: linear-gradient(179.84deg, #999999 0.14%, #7B1079 59.39%);
-opacity: 0.3;
-
-
-
+.body1{
+    position: relative;
+    width: 1169px;
+    height: 100%;
+    left: 277px; /* відступ на ширину side_menu + 4px */
+    top: 2px;
+  
+    background: linear-gradient(179.84deg, rgba(153, 153, 153, 0.3) 0.14%, rgba(123, 16, 121, 0.3) 59.39%);
+    z-index: 1; /* Позаду side_menu */
 }
 header {
   position: fixed;
@@ -129,68 +120,71 @@ border-radius: 20px;
   text-fill-color: transparent;
 }
 .side_menu{
-position: fixed;
-width: 273px;
-height: 967px;
-left: -4px;
-top: 58px;
-background: #333333;
-border-radius: 10px;
-}
-.menu_items{
-  padding-top: 47px;
-padding-left: 30px;
+  position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-direction: column;
- 
-  gap: 10px;
-}
-.menu_items a {
+  align-items: flex-start;
+  width: 273px;
+  height: 967px;
+  left: 0px;
+  top: 58px;
+  gap: 50px;
+  background: #333333;
+  border-radius: 10px;
+  }
+  .menu_items{
+    gap: 10px;
+    padding-top: 47px;
+  padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .menu_items a {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .create_playlist{
+  position: fixed;
+  width: 226px;
+  height: 49px;
+  left: 18px;
+  top: 560px;
+  background: #FFFFFF;
+  border-radius: 15px;
   font-family: 'Inter';
   font-style: italic;
   font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
-  text-align: left;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.create_playlist{
+  font-size: 23px;
+  line-height: 28px;
+  text-align: center;
+  background: linear-gradient(90deg, #6200FF 0%, #FF000D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  }
+  .side_logo{
 position: absolute;
-width: 226px;
-height: 49px;
-left: 18px;
-top: 560px;
-background: #FFFFFF;
-border-radius: 15px;
-font-family: 'Inter';
-font-style: italic;
-font-weight: 700;
-font-size: 23px;
-line-height: 28px;
-text-align: center;
-background: linear-gradient(90deg, #6200FF 0%, #FF000D 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-fill-color: transparent;
-}
-.side_logo{
-position: absolute;
-width: 15px;
-height: 21px;
-left: 7px;
-top: 50px;
-}
-.logo_playlist{
-position: relative;
-width: 30px;
-height: 30px;
-left: 12px;
-top: 321px;
-}
+  width: 15px;
+  height: 21px;
+  left: 7px;
+  top: 50px;
+  }
+  .side_block2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 .ads {
+align-items: center;
   width: 1132px;
   height: 144px;
   background: rgba(17, 0, 255, 0.25);
@@ -210,4 +204,44 @@ top: 321px;
   text-align: center;
   color: #EA00FF;
   margin: 0; /* Прибрати дефолтні відступи */
+}
+.text_body{
+  display: flex;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+.content1{
+  /* Perfomer 1 */
+
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+width: 160px;
+height: 212px;
+left: 311px;
+top: 371px;
+margin-left: 20px;
+
+
+}
+.name_prefomer{
+text-decoration: none;
+margin: 0;
+font-family: 'Inter';
+font-style: italic;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+}
+.perfomer{
+text-decoration: none;
+margin: 0;
+font-family: 'Inter';
+font-style: italic;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+color: rgba(255, 255, 255, 0.6); 
 }
