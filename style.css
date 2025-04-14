@@ -1,0 +1,213 @@
+.body{
+/* Rectangle 7 */
+display: flex;
+justify-content: center;
+position: fixed;
+/* Rectangle 7 */
+
+
+width: 1169px;
+height: 1429px;
+left: 273px;
+top: 60px;
+
+background: linear-gradient(179.84deg, #999999 0.14%, #7B1079 59.39%);
+opacity: 0.3;
+
+
+
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 57px;
+  background: linear-gradient(0deg, #000000 50%, #666666 100%);
+ 
+}
+.logo{
+position: absolute;
+width: 138px;
+height: 35px;
+left: 52px;
+top: 11px;
+}
+.home{
+position: absolute;
+width: 28px;
+height: 28px;
+left: 212px;
+top: 14px;
+}
+.search_logo{
+position: absolute;
+width: 30px;
+height: 26px;
+left: 261px;
+top: 14px;
+
+
+}
+
+.search_conteiner{
+  padding-left: 10px;
+}
+.search{
+position: absolute;
+width: 175px;
+height: 26px;
+left: 295px;
+top: 14px;
+background: #FFFFFF;
+border-radius: 10px;
+}
+.down_download{
+position: absolute;
+width: 170.03px;
+height: 19.5px;
+left: 1006px;
+top: 16px;
+}
+.stick{
+position: absolute;
+width: 2px;
+height: 35px;
+left: 1225px;
+top: 9px;
+background: #FFFFFF;
+}
+.sign_up{
+position: absolute;
+width: 67px;
+height: 28px;
+left: calc(50% - 67px/2 + 527.5px);
+top: 20px;
+font-family: 'Inter';
+font-style: italic;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+background: linear-gradient(180deg, #1E00FF 0%, #00FFBB 99.99%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+.login{
+position: absolute;
+width: 87px;
+height: 28px;
+left: calc(50% - 87px/2 + 623.5px);
+top: 14px;
+background: #1C1919;
+border-radius: 20px;
+}
+.login {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.login_text {
+  position: relative;
+  
+
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  background: linear-gradient(180deg, #1E00FF 0%, #00FFBB 99.99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.side_menu{
+position: fixed;
+width: 273px;
+height: 967px;
+left: -4px;
+top: 58px;
+background: #333333;
+border-radius: 10px;
+}
+.menu_items{
+  padding-top: 47px;
+padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ 
+  gap: 10px;
+}
+.menu_items a {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.create_playlist{
+position: absolute;
+width: 226px;
+height: 49px;
+left: 18px;
+top: 560px;
+background: #FFFFFF;
+border-radius: 15px;
+font-family: 'Inter';
+font-style: italic;
+font-weight: 700;
+font-size: 23px;
+line-height: 28px;
+text-align: center;
+background: linear-gradient(90deg, #6200FF 0%, #FF000D 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+.side_logo{
+position: absolute;
+width: 15px;
+height: 21px;
+left: 7px;
+top: 50px;
+}
+.logo_playlist{
+position: relative;
+width: 30px;
+height: 30px;
+left: 12px;
+top: 321px;
+}
+.ads {
+  width: 1132px;
+  height: 144px;
+  background: rgba(17, 0, 255, 0.25);
+  border-radius: 20px;
+  position: relative; /* ДЛЯ абсолютного позиціювання тексту */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ads_text {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 91px;
+  text-align: center;
+  color: #EA00FF;
+  margin: 0; /* Прибрати дефолтні відступи */
+}
