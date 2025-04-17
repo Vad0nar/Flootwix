@@ -1,21 +1,33 @@
 .body1{
-    position: relative;
-    width: 1169px;
-    height: 100%;
-    left: 277px; /* відступ на ширину side_menu + 4px */
-    top: 2px;
-  
-    background: linear-gradient(179.84deg, rgba(153, 153, 153, 0.3) 0.14%, rgba(123, 16, 121, 0.3) 59.39%);
-    z-index: 1; /* Позаду side_menu */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1169px;
+  height: 100%;
+  left: 277px; /* відступ на ширину side_menu + 4px */
+ 
+  margin-top: 60px;
+  background: linear-gradient(179.84deg, rgba(153, 153, 153, 0.3) 0.14%, rgba(123, 16, 121, 0.3) 59.39%);
+  z-index: 1; /* Позаду side_menu */
 }
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 57px;
-  background: linear-gradient(0deg, #000000 50%, #666666 100%);
- 
+
+
+position: absolute;
+display: flex;
+justify-content:flex-end;
+gap: 15px;
+z-index: 1000;
+
+top: 0;
+left: 0;
+width: 100%;
+height: 57px;
+
+background: linear-gradient(0deg, #000000 50%, #666666 100%);
 }
 .logo{
 position: absolute;
@@ -39,10 +51,13 @@ left: 261px;
 top: 14px;
 
 
+
+
 }
 
+
 .search_conteiner{
-  padding-left: 10px;
+padding-left: 10px;
 }
 .search{
 position: absolute;
@@ -54,32 +69,65 @@ background: #FFFFFF;
 border-radius: 10px;
 }
 .down_download{
-position: absolute;
-width: 170.03px;
-height: 19.5px;
-left: 1006px;
+
+margin-top: 15px;
+/* Завантажити додаток */
+
+
+
+
+width: 168px;
+height: 18px;
+left: calc(50% - 168px/2 + 372.01px);
 top: 16px;
+
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+
+
+color: #FFFFFF;
+
+
+opacity: 0.8;
+
+
 }
 .stick{
-position: absolute;
+margin-top: 10px;
 width: 2px;
 height: 35px;
 left: 1225px;
 top: 9px;
 background: #FFFFFF;
 }
+
+
 .sign_up{
-position: absolute;
-width: 67px;
+margin-top: 10px;
+width: 87px;
 height: 28px;
-left: calc(50% - 67px/2 + 527.5px);
-top: 20px;
-font-family: 'Inter';
+left: calc(50% - 87px/2 + 623.5px);
+top: 14px;
+background: #302e2e;
+border-radius: 20px;
+}
+.sign_up_text{
+position: relative;
+margin-top: 12px;
+
+
+font-family: 'Inter', sans-serif;
 font-style: italic;
 font-weight: 700;
 font-size: 18px;
 line-height: 22px;
 text-align: center;
+
+
 background: linear-gradient(180deg, #1E00FF 0%, #00FFBB 99.99%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -87,141 +135,162 @@ background-clip: text;
 text-fill-color: transparent;
 }
 .login{
-position: absolute;
+margin-top: 10px;
 width: 87px;
 height: 28px;
 left: calc(50% - 87px/2 + 623.5px);
 top: 14px;
-background: #1C1919;
+background: #302e2e;
 border-radius: 20px;
 }
-.login {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
 .login_text {
-  position: relative;
-  
+position: relative;
 
-  font-family: 'Inter', sans-serif;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
 
-  background: linear-gradient(180deg, #1E00FF 0%, #00FFBB 99.99%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+
+font-family: 'Inter', sans-serif;
+font-style: italic;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+
+background: linear-gradient(180deg, #1E00FF 0%, #00FFBB 99.99%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
 }
 .side_menu{
-  position: fixed;
+position: absolute;
+display: flex;
+justify-content: left;
+flex-direction: column;
+align-items: flex-start;
+width: 273px;
+height:1500px;
+left: 0px;
+top: 0px;
+gap: 50px;
+background: #333333;
+border-radius: 10px;
+}
+.menu_items{
+  margin-top: 50px;
+  gap: 10px;
+  padding-top: 47px;
+padding-left: 30px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
-  width: 273px;
-  height: 967px;
-  left: 0px;
-  top: 58px;
-  gap: 50px;
-  background: #333333;
-  border-radius: 10px;
-  }
-  .menu_items{
-    gap: 10px;
-    padding-top: 47px;
-  padding-left: 30px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .menu_items a {
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
-    text-align: left;
-    color: #FFFFFF;
-    text-decoration: none;
-  }
-  .create_playlist{
-  position: fixed;
-  width: 226px;
-  height: 49px;
-  left: 18px;
-  top: 560px;
-  background: #FFFFFF;
-  border-radius: 15px;
+}
+.menu_items a {
+  
   font-family: 'Inter';
   font-style: italic;
   font-weight: 700;
-  font-size: 23px;
-  line-height: 28px;
-  text-align: center;
-  background: linear-gradient(90deg, #6200FF 0%, #FF000D 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  }
-  .side_logo{
+  font-size: 25px;
+  line-height: 30px;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.create_playlist{
+  
 position: absolute;
-  width: 15px;
-  height: 21px;
-  left: 7px;
-  top: 50px;
-  }
-  .side_block2{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+width: 226px;
+height: 49px;
+left: 18px;
+top: 560px;
+color: rgb(0, 0, 0);
+border-radius: 15px;
+font-family: 'Inter';
+font-style: italic;
+font-weight: 700;
+font-size: 23px;
+line-height: 28px;
+text-align: center;
+background: linear-gradient(90deg, #9d08b7 100%, #FF000D 100%);
+
+
+
+
+
+
+}
+.side_logo{
+  margin-top: 50px;
+position: absolute;
+width: 15px;
+height: 21px;
+left: 7px;
+top: 50px;
+}
+.side_block2{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 .ads {
 align-items: center;
-  width: 1132px;
-  height: 144px;
-  background: rgba(17, 0, 255, 0.25);
-  border-radius: 20px;
-  position: relative; /* ДЛЯ абсолютного позиціювання тексту */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+width: 1132px;
+height: 144px;
+background: rgba(17, 0, 255, 0.25);
+border-radius: 20px;
+position: relative; /* ДЛЯ абсолютного позиціювання тексту */
+display: flex;
+align-items: center;
+justify-content: center;
 }
+
 
 .ads_text {
-  font-family: 'Inter', sans-serif;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 91px;
-  text-align: center;
-  color: #EA00FF;
-  margin: 0; /* Прибрати дефолтні відступи */
+font-family: 'Inter', sans-serif;
+font-style: italic;
+font-weight: 700;
+font-size: 75px;
+line-height: 91px;
+text-align: center;
+color: #EA00FF;
+margin: 0; /* Прибрати дефолтні відступи */
 }
-.text_body{
+.text_body {
+  
   display: flex;
-  justify-content: flex-start;
+  align-items: start;
   justify-content: space-between;
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 }
 .content1{
-  /* Perfomer 1 */
+/* Perfomer 1 */
+margin-bottom: 50px;
+gap: 20px;
+width: 30%;
+  height: 100px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  font-size: 24px;
 
-display: flex;
-justify-content: flex-start;
-flex-direction: column;
+
+
+
+}
+.imgdiv{
 width: 160px;
-height: 212px;
-left: 311px;
-top: 371px;
-margin-left: 20px;
-
+height: 160px;
+border-radius: 100%;
 
 }
 .name_prefomer{
@@ -233,6 +302,7 @@ font-weight: 700;
 font-size: 20px;
 line-height: 24px;
 
+
 color: #FFFFFF;
 }
 .perfomer{
@@ -243,5 +313,13 @@ font-style: italic;
 font-weight: 700;
 font-size: 20px;
 line-height: 24px;
-color: rgba(255, 255, 255, 0.6); 
+color: rgba(255, 255, 255, 0.6);
+}
+.imgdivrectangle{
+width: 160px;
+height: 160px;
+left: 310px;
+top: 662px;
+border-radius: 10px;
+
 }
