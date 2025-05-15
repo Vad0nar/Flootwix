@@ -1,0 +1,440 @@
+/* Скидання стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #35043b, #08083d);
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+/* Шапка */
+header {
+  background-color: #0d0d0d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 30px;
+  position: fixed;
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}header {
+  background-color: #0d0d0d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Відсуває nav вправо */
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Групуємо логотип і іконку */
+.logo-group {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Відстань між FlotWix і іконкою */
+}
+
+/* Навігаційний список */
+.nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Пункти меню */
+
+
+/* Колір при наведенні */
+.nav a:hover {
+  color: gold;
+}
+
+/* Активний пункт */
+
+
+/* Щоб контент не заходив під меню */
+
+#h1 {
+  
+  padding-top: 50px;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+ 
+  flex-wrap: wrap;
+  height: 800px;
+}
+.hero_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Щоб було адаптивно на мобілках */
+  gap: 20px;
+  padding: 20px;
+}
+.hero_text {
+  border: 2px;
+  border-color: white;
+  max-width: 600px;
+  margin-left: 150px;
+}
+
+.hero_text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero_text h2 {
+  font-size: 36px;
+  color: #ff2e86;
+  margin-bottom: 20px;
+}
+
+.hero_text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+
+.btn_primary {
+  background: #ff2e86;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn_secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: #e02676;
+}
+.btn-secondary:hover{
+  color: black;
+  background-color: white;
+}
+
+/* Лого з зіркою */
+
+
+
+.circle {
+  width: 120px;
+  height: 120px;
+  background: #0a0a3f;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle p {
+  font-weight: bold;
+}
+
+.circle span {
+  margin-top: 5px;
+}
+
+
+
+.hero-photo {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px; /* обмеження ширини */
+  text-align: center;
+  margin-right: 250px; /* щоб трохи відступити праворуч */
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.slider {
+ box-shadow: 10px 5px 5px red;
+  display: flex;
+  width: calc(600px * 3); /* ширина 3х фото */
+  animation: slide 9s infinite;
+}
+
+.slider img {
+  width: 500px; /* ширина одного фото */
+  
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-500px); }
+  100% { transform: translateX(0); }
+}
+
+.hero-photo p {
+  
+  margin-top: 5px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: white;
+}
+
+
+#h1{
+  font:48px ;
+}
+.countries {
+  max-width: 600px;
+  margin-top: 20px;
+  background-color: rgb(0, 0, 0);
+}
+
+.country-list {
+
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Дві колонки */
+  gap: 15px; /* Відстань між елементами */
+  text-align: center;
+}
+
+.country-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid;
+  border-color: white;
+  background-color: #0c0808;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+.country-list li img{
+  width: 50px;
+  height: 30px;
+}
+
+.country-list li:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: #e0e0e0;
+}
+
+.history {
+  max-width: 900px;
+ 
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: white;
+}
+
+#history {
+  margin-top: 15px;
+  
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.history p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.eurovision-videos {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap; /* Щоб адаптувалося на мобілках */
+}
+
+
+.video-block {
+  text-align: center;
+  max-width: 300px;
+  margin-bottom: 20px; /* Додає відступ знизу між відео-блоками */
+}
+
+.video-block h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff; /* або чорний, залежно від фону */
+}
+
+.eurovision-news {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  margin-left: 0;  /* Виключає вирівнювання по центру */
+  margin-top: 30px; /* Можна додати відступ зверху, якщо потрібно */
+}
+
+.news-title {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.news-item {
+  background-color: #2c2c2c;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  background-color: #3a3a3a;
+}
+
+.news-headline {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.news-summary {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  font-size: 14px;
+  color: #00b0b0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.footer {
+  background-color: #10023f;
+  color: white;
+  padding: 40px 20px;
+ 
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin: 6px 0;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  margin-top: 30px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ccc;
+  font-style: italic;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+  border-radius: 50%;
+}
+@media (max-width: 417px) {
+  .nav {
+    align-items: center;
+    justify-content:flex-end;
+  }
+  .nav ul li a {
+  font-size: 16px;
+  margin: 10px 0;
+  }
+  
+  }
