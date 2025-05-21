@@ -1,3 +1,4 @@
+
 body{
 
   width: 100%;
@@ -25,12 +26,7 @@ width: 100%;
 
 background: linear-gradient(0deg, #000000 50%, #666666 100%);
 }
-.burger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  user-select: none;
-}
+
 .logo{
 position: absolute;
 width: 138px;
@@ -205,6 +201,7 @@ text-fill-color: transparent;
 
 }
 .container { /* Контейнер з виконавцями чи піснями*/
+  position: relative;
   display: flex;
   justify-content: start;
   flex-direction: row;
@@ -270,7 +267,49 @@ border-radius: 10px;
   width: 165px;
   height: 165px;
 }
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;              /* приховуємо */
+  pointer-events: none;    /* неактивні */
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.container:hover .scroll-btn {
+  opacity: 1;              /* показуємо при наведенні */
+  pointer-events: auto;    /* робимо клікабельними */
+}
+
+.scroll-btn.left {
+  left: 5px;
+}
+
+.scroll-btn.right {
+  right: 5px;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%) scale(1.1);
+}
 .footer {
+  width: 100%;
   background-color: #1a001f;
   color: white;
   padding: 40px 20px;
@@ -324,4 +363,129 @@ border-radius: 10px;
   margin: 0 8px;
   border-radius: 50%;
   
+}
+@media (max-width: 768px) {
+  .page_container{
+    margin-top: 15px;
+  }
+
+  /* Зменшуємо загальний відступ і фон */
+  .maincontainer {
+    
+    
+    background: linear-gradient(179.84deg, rgba(153, 153, 153, 0.2) 0.14%, rgba(123, 16, 121, 0.2) 59.39%);
+  }
+
+  /* Контейнер стає вертикальним або зі скролом */
+  .container {
+    flex-wrap: nowrap; /* залишаємо горизонтальний скрол */
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: flex-start;
+  }
+
+  /* Горизонтальний скрол з меншим gap */
+
+
+  /* Зменшуємо ширину і висоту блоків виконавців, щоб не наїжджали */
+  .content1 {
+    width: 40%; /* замість 30% */
+    height: auto; /* автоматична висота */
+    margin-bottom: 35px;
+    gap: 15px;
+    font-size: 20px;
+    align-items: center;
+  }
+
+  /* Зменшуємо розмір картинок */
+  .imgdiv, .imgdivrectangle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .imgdiv:hover, .imgdivrectangle:hover {
+    width: 135px;
+    height: 135px;
+  }
+
+  /* Текст виконавців трохи менший */
+  .name_prefomer {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  /* Header — більше місця для логотипу і меню */
+  header {
+    
+    width: 100vh;
+ 
+    justify-content: space-between;
+  }
+
+  
+
+  .logo {
+ 
+    width: 120px;
+    height: auto;
+    
+  }
+
+  .search_conteiner {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .search {
+    font-size: 15px;
+    padding: 10px 40px;
+  }
+
+  /* Бічне меню на iPad зробимо ширшим, але не повністю */
+  .side_menu {
+    width: 220px;
+    height: auto;
+    margin-top: 50px;
+    border-radius: 8px;
+    padding: 10px 15px;
+  }
+
+  .menu_items a {
+    font-size: 28px;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  
+
+  /* Зменшуємо розмір стрілок прокрутки */
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+    .footer-content {
+      
+    flex-direction: column; /* колонки під один одного */
+    align-items: center;    /* по центру */
+    gap: 20px;              /* відступи між колонками */
+  }
+  .footer-column {
+    flex: 1 1 100%;        /* колонки на всю ширину */
+    margin: 10px 0;        /* зверху і знизу */
+    text-align: center;    /* центр тексту */
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .social-icons a img {
+    width: 25px;           /* трохи менші іконки */
+    height: 25px;
+    margin: 0 5px;
+  }
+  .footer {
+    width:100vh ;
+    padding: 30px 10px;    /* трохи менший padding */
+  }
 }

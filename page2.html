@@ -15,6 +15,7 @@ background: #000000;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="icon" href="Items/Logo (7).png" type="image/x-icon">
   <link rel="stylesheet" href="style1.css">
   <script src="script.js"></script>
 </head>
@@ -299,17 +300,25 @@ background: #000000;
 <button class="support_button" onclick="openSupport()">Підтримка</button>
 <script>
   function showTab(tabName) {
-  // Видалити активний клас з усіх табів
-  document.querySelectorAll('.music_tab').forEach(btn => btn.classList.remove('active'));
-  document.querySelectorAll('.tab_content').forEach(tab => tab.classList.remove('active'));
-
-  // Додати активний клас до вибраного таба
-  document.getElementById(tabName).classList.add('active');
-  event.target.classList.add('active');
+    document.querySelectorAll('.music_tab').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab_content').forEach(tab => tab.classList.remove('active'));
+    document.getElementById(tabName).classList.add('active');
+    event.target.classList.add('active');
   }
+
   function openSupport() {
-  alert("На данний момент підтримка у відпустці)");
-}
+    alert("На данний момент підтримка у відпустці)");
+  }
+
+  // Показати кнопку після прокрутки
+  window.addEventListener('scroll', () => {
+    const supportBtn = document.querySelector('.support_button');
+    if (window.scrollY >50) {
+      supportBtn.classList.add('show');
+    } else {
+      supportBtn.classList.remove('show');
+    }
+  });
 </script>
 
 </body>
